@@ -6,17 +6,13 @@
 # -- Run unit tests:
 #   python3 setup.py test
 
-
 import setuptools
 
-# Change the 'project_name' here to the correct one.
-from project_name import __version__
-
-# Set the project name here.
-PROJECT_NAME = "project_name"
+# Do change the 'project_name' here to the correct one.
+from project_name import __name__, __version__
 
 setuptools.setup(
-    name=PROJECT_NAME,
+    name=__name__,
     version=__version__,
     license="MIT License",
     author="William Abreu",
@@ -27,13 +23,11 @@ setuptools.setup(
     url="https://github.com/williamabreu/python-baseline",
     install_requires=open("requirements.txt").read().splitlines(),
     platforms="any",
-    packages=setuptools.find_packages(".", exclude=(f"{PROJECT_NAME}.tests",)),
+    packages=setuptools.find_packages(".", exclude=(f"{__name__}.tests",)),
     python_requires=">=3.8",
-    test_suite=f"{PROJECT_NAME}.tests",
+    test_suite=f"{__name__}.tests",
     keywords="",
-    entry_points={
-        "console_scripts": [f"{PROJECT_NAME}={PROJECT_NAME}.__main__:main"]
-    },
+    entry_points={"console_scripts": [f"{__name__}={__name__}.__main__:main"]},
     classifiers=[
         "Environment :: Console",
         "Programming Language :: Python :: 3 :: Only",
