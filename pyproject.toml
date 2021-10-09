@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "project_name"
+version = "1.0.dev1"
+description = "Summarize your project purpose here"
+authors = ["William Abreu <contato@williamabreu.net>"]
+license = "MIT License"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.910"
+pydocstyle = "^6.1.1"
+pre-commit = "^2.15.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
