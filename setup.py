@@ -8,7 +8,7 @@
 
 import setuptools
 
-# Do change the 'project_name' here to the correct one.
+# FIXME: Do change the 'project_name' here to the correct one.
 from project_name import __name__, __version__
 
 setuptools.setup(
