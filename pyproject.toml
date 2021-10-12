@@ -12,7 +12,24 @@ python = "^3.8"
 mypy = "^0.910"
 pydocstyle = "^6.1.1"
 pre-commit = "^2.15.0"
+black = "^21.9b0"
+flake8 = "^4.0.1"
+isort = "^5.9.3"
+pyclean = "^2.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+# See: https://mypy.readthedocs.io/en/stable/config_file.html
+
+[tool.mypy]
+exclude = "(\\..*|venv*|__pycache__)/$"
+files = ["project_name"]  # FIXME: Do set this to the correct 'project_name'.
+python_version = "3.8"
+strict_optional = false
+ignore_missing_imports = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+show_error_codes = true
+pretty = true
