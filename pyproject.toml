@@ -24,7 +24,7 @@ build-backend = "poetry.core.masonry.api"
 # See: https://mypy.readthedocs.io/en/stable/config_file.html
 
 [tool.mypy]
-exclude = "(\\..*|venv*|__pycache__)/$"
+exclude = "(\\..*|venv*|__pycache__|build|dist)/$"
 files = ["project_name"]  # FIXME: Do set this to the correct 'project_name'.
 python_version = "3.8"
 strict_optional = false
