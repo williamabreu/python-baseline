@@ -12,7 +12,7 @@ flake8:
 	@echo "-> flake done."
 
 isort:
-	isort .
+	isort . --profile black
 	@echo "-> isort done."
 
 pydocstyle:
