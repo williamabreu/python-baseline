@@ -30,4 +30,7 @@ requirements:
 
 clean:
 	pyclean -v .
-	rm -r .mypy_cache
+	rm -rf .mypy_cache
+	rm -rf build
+	rm -rf dist
+	rm -rf *.egg-info
