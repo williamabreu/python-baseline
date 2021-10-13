@@ -1,10 +1,10 @@
 # Usage:
 #
 # -- Build the project for distribution:
-#   python3 setup.py sdist bdist_wheel
+#   python setup.py sdist bdist_wheel
 #
 # -- Run unit tests:
-#   python3 setup.py test
+#   python setup.py test
 
 import setuptools
 
