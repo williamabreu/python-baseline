@@ -9,11 +9,11 @@
 import setuptools
 
 # FIXME: Do change the 'project_name' here to the correct one.
-from project_name import __name__, __version__
+import project_name as src
 
 setuptools.setup(
-    name=__name__,
-    version=__version__,
+    name=src.__name__,
+    version=src.__version__,
     license="MIT License",
     author="William Abreu",
     author_email="contato@williamabreu.net",
@@ -23,11 +23,13 @@ setuptools.setup(
     url="https://github.com/williamabreu/python-baseline",
     install_requires=open("requirements.txt").read().splitlines(),
     platforms="any",
-    packages=setuptools.find_packages(".", exclude=(f"{__name__}.tests",)),
+    packages=setuptools.find_packages(".", exclude=(f"{src.__name__}.tests",)),
     python_requires=">=3.8",
-    test_suite=f"{__name__}.tests",
+    test_suite=f"{src.__name__}.tests",
     keywords="",
-    entry_points={"console_scripts": [f"{__name__}={__name__}.__main__:main"]},
+    entry_points={
+        "console_scripts": [f"{src.__name__}={src.__name__}.__main__:main"]
+    },
     classifiers=[
         "Environment :: Console",
         "Programming Language :: Python :: 3 :: Only",
