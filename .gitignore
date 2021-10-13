@@ -92,7 +92,6 @@ ipython_config.py
 #Pipfile.lock
 
 # Poetry lock
-#   Comment it out if the project is not a library.
 poetry.lock
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
